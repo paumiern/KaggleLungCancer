@@ -5,12 +5,14 @@ import dicom
 import os
 import scipy.ndimage
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from mpl_toolkits.mplot3d import art3d
 
 from skimage import measure, morphology
 #from mpl_toolkit
 
 # Some constants
-INPUT_FOLDER = './sample_images/'
+INPUT_FOLDER = '../input/sample_images/'
 patients = os.listdir(INPUT_FOLDER)
 patients.sort()
 
@@ -83,7 +85,7 @@ def plot_3d(image, threshold=-300):
     ax = fig.add_subplot(111, projection='3d')
 
     # Fancy indexing: `verts[faces]` to generate a collection of triangles
-    mesh = Poly3DCollection(verts[faces], alpha=0.1)
+    mesh = art3d.Poly3DCollection(verts[faces], alpha=0.1)
     face_color = [0.5, 0.5, 1]
     mesh.set_facecolor(face_color)
     ax.add_collection3d(mesh)
