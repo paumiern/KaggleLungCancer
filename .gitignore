@@ -1,3 +1,8 @@
+# Own ignored files
+.idea/
+sample_images/
+data_password.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
