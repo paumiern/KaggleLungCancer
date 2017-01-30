@@ -6,11 +6,13 @@ import os
 import scipy.ndimage
 import matplotlib.pyplot as plt
 
+
+
 from skimage import measure, morphology
 #from mpl_toolkit
 
 # Some constants
-INPUT_FOLDER = './sample_images/'
+INPUT_FOLDER = '../Data/patient/'
 patients = os.listdir(INPUT_FOLDER)
 patients.sort()
 
